@@ -1,0 +1,17 @@
+{
+  "name": "filemeta-service",
+  "version": "1.0.0",
+  "description": "File Metadata Microservice",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "a-mt",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.0",
+    "multer": "^1.3.0",
+    "pug": "^2.0.0-beta11"
+  }
+}
