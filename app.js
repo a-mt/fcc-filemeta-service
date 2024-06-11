@@ -1,27 +1,9 @@
-var express = require('express');
-var app     = express();
-var fs      = require('fs');
+'use strict';
 
-var multer  = require('multer');
-var upload  = multer({ dest: 'uploads/' });
+const app = require('./express');
 
-app.set('view engine', 'pug');
+const PORT = process.env.PORT || 8080;
 
-// Submit file
-app.post('/get-file-size', upload.single('file'), function(req, res){
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end('{"size":' + req.file.size + '}');
-
-    fs.unlink(req.file.path);
-});
-
-// Display form
-app.get('*', function(req, res){
-    res.render('index');
-});
-
-// Start server
-var port = process.env.PORT || 8080;
-app.listen(port, function(){
-    console.log('The server is running on port ' + port);
+app.listen(PORT, function(){
+    console.log(`The server is listening on port ${PORT}`);
 });

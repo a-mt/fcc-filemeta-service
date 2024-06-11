@@ -8,4 +8,11 @@ User Stories :
 
       {"size":441147}
 
-https://aryanj-file-size.herokuapp.com/ 
+## Install
+
+``` bash
+npm install
+npm start
+```
+
+Go to localhost:8080
